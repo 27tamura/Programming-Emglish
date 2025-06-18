@@ -66,21 +66,21 @@ function generateWordList() {
 
 function showAnswer(index) { 
 
-        const english = wordList[index].english; 
+    const english = wordList[index].english; 
 
-        const answerElement = document.getElementById(`answer${index}`); 
+    const answerElement = document.getElementById(`answer${index}`); 
 
-        answerElement.textContent = english; 
+     answerElement.textContent = english; 
 
  
 
 // 読み上げ機能 
 
-        const utterance = new SpeechSynthesisUtterance(english); 
+    const utterance = new SpeechSynthesisUtterance(english); 
 
-        utterance.lang = "en-US"; // アメリカ英語の音声で読み上げ 
+    utterance.lang = "en-US"; // アメリカ英語の音声で読み上げ 
 
-        utterance.rate = 1; 
+    utterance.rate = 1; 
 
     speechSynthesis.speak(utterance); 
 
